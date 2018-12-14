@@ -1,49 +1,49 @@
 <html>
 <head>
-  <title>student marks</title>
+  <title>student</title>
   <script type="text/javascript">
-      var stu1=new Student("varma");
-      var stu2=new Student("raju");
-      var stu3=new Student("apple");
-      var stu4=new Student("eagle");
-      var stu5=new Student("blue");
-      var studen=[stu1,stu2,stu3,stu4,stu5];
+      var stu1=new Student("swapna");
+      var stu2=new Student("radha");
+      var stu3=new Student("bharathi");
+      var stu4=new Student("sailaja");
+      var stu5=new Student("lakshmi");
+      var stud=[stu1,stu2,stu3,stu4,stu5];
       function Student(name)
       {
           this.name=name;
           this.subj=new Array(Math.floor(Math.random() * 100),Math.floor(Math.random() * 100),Math.floor(Math.random() * 100));
-       }
-      for(var i=0;i<studen.length;i++)
+}
+      for(var i=0;i<stud.length;i++)
       {
           sum=0;
           for(var j=0;j<3;j++)
           {
-              stu[i].sum=sum+studen[i].subj[j];
+              stud[i].sum=sum+stud[i].subj[j];
           }
-          studen[i].avg=studen[i].sum/3;
+          stud[i].avg=stud[i].sum/3;
       }
- document.writeln("<h1>names and marks</h1><br>");
-     studen.sort(function(a,b){return b.sum-a.sum});
-      for(var k=0;k<studen.length;k++)
+ document.writeln("<h1>names and marks</h1><br>")
+     stud.sort(function(a,b){return b.sum-a.sum});
+      for(var k=0;k<stud.length;k++)
       {
-        document.writeln(studen[k].name+"  "+studen[k].sum+"<br>");
+        document.writeln(stud[k].name+"  "+stud[k].sum+"<br>");
      }
- studen.sort(function(a, b){
+ stud.sort(function(a, b){
     if(a.name < b.name) 
      return -1 
     else
       return 1
       })
   document.writeln("<h1>names</h1><br>");
-      for(var k=0;k<studen.length;k++)
+      for(var k=0;k<stud.length;k++)
       {
-        document.writeln(studen[k].name+"<br>");
+        document.writeln(stud[k].name+"<br>");
      }
  document.writeln("<h1>names and averages</h2><br>")
     stud.sort(function(a,b){return b.avg-a.avg;});
-      for(var k=0;k<studen.length;k++)
+      for(var k=0;k<stud.length;k++)
       {
-       document.writeln(studen[k].name+"  "+studen[k].avg+"<br>");
+       document.writeln(stud[k].name+"  "+stud[k].avg+"<br>");
      }
    </script>
   </head>
