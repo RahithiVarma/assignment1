@@ -17,27 +17,27 @@
     var avg=0;
     var students=new Array(stu1,stu2,stu3,stu4,stu5);
       for(var i=0;i<students.length;i++)
-        var sum=0;
+        
         for(var j=0;j<3;j++)
           {
-           sum+=students[i].subj[j];
+            var sum=0;
+           students[i].sum=sum+students[i].subj[j];
            }
-          avg+=sum/3;
-          document.write(student[i].name,sum);
+          students[i].avg=students[i].sum/3;
+          
           }
+ 
+          document.writeln("<h1>names and marks</h1><br>")
+          students.sort(function(x,y){return y.sum-x.sum;});
           for(var k=0;k<students.length;k++)
-          {
-          document.write(students[k].name+" "+students[k].sum+"  "+students[k].avg);
-          }
-          students.sort(function(x,y){return y.sum-x.sum});
-          for(var i=0;i<students.length;i++)
             {
-              document.write(students[i].name+" "+students.sum);
+              document.write(students[k].name+" "+students[k].sum);
              }
-            students.sort(function(x,y){return y.avg-x.avg});
+            document.writeln("<h1>names and avg</h1><br>");
+            students.sort(function(x,y){return y.avg-x.avg;});
              for(var k=0;k<students.length;k++)
              {
-                document.write(students[k].name+"  "+students[k].avg);
+                document.write(students[k].name+"  "+students[k].avg+"<br>");
               }
               students.sort(function(x,y){
                      if(x.name < y.name)
@@ -45,11 +45,9 @@
                       else
                           return 1
                 })
-               for(var k=0;k<students.length;k++)
-               {
-                   document.write(students[k].name+" "+students[k].avg+"  "+students[k].sum);
-       
-     
-     </script>
+                document.writeln("<h1>names</h1><br>");
+      
+    </script>
      </head>
+    <body/>
      </html>
