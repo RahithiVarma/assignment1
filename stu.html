@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>student</title>
+  <title>student marks</title>
   <script type="text/javascript">
       var stu1=new Student("varma");
       var stu2=new Student("raju");
@@ -22,14 +22,14 @@
           }
           studen[i].avg=studen[i].sum/3;
       }
- document.writeln("<h1>names and marks</h1><br>")
+ document.writeln("<h1>names and marks</h1><br>");
      studen.sort(function(a,b){return b.sum-a.sum});
       for(var k=0;k<studen.length;k++)
       {
         document.writeln(studen[k].name+"  "+studen[k].sum+"<br>");
      }
- studen.sort(function(a, b){
-    if(a.name < b.name) 
+ studen.sort(function(x, y){
+    if(x.name < y.name) 
      return -1 
     else
       return 1
